@@ -3,9 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<script>
-		// TODO: create a handler
+		function setSearchEngine(){
+			console.log("setSearchEngine() has run");
+		}
     window.addEventListener("load", function(){
-        // TODO: register the handler
+        let submit = document.getElementById("submit");
+		submit.addEventListener("click", function(){
+			setSearchEngine();
+		})
     });
 	</script>
 </head>
@@ -21,7 +26,7 @@
 	<label>Bing<input type="radio" name="engine" value="bing"/></label>
 	<label>Ask<input type="radio" name="engine" value="ask"/></label>
 	<!--Form Submission-->
-	<button value="Go!">Submit!</button>
+	<button value="Go!" id = "submit">Go!</button>
 	</form>
 
 </body>
