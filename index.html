@@ -4,7 +4,17 @@
 	<meta charset="utf-8">
 	<script>
 		function setSearchEngine(){
-			console.log("setSearchEngine() has run");
+			let actions = {
+  				  "google": "https://www.google.com/search",
+				  "duckDuckGo": "https://www.duckduckgo.com/search",
+				  "bing": "https://www.bing.com/search",
+				  "ask": "https://www.ask.com/search"
+			};
+			let engine = document.querySelector("input[name=engine]:checked");
+			let form = document.getElementById("searchForm");
+			let action = actions[engine.value];
+			form.setAttribute("action", action);
+			
 		}
     window.addEventListener("load", function(){
         let submit = document.getElementById("submit");
